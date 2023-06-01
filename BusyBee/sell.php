@@ -1,6 +1,7 @@
 <?php
     include_once 'Navbar.php';
 ?>
+
 <head>
     <link rel="stylesheet" href="stylesheets/LoginSignup-Style.css">
     <link rel="stylesheet" href="stylesheets/form-errors.css">  
@@ -51,7 +52,7 @@
                         <input type="text" id="id" name="id" value="<?php $_SESSION["username"]; ?>" required hidden disabled>
 
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control has-validation" id="registration" name="registration" aria-describedby="reghelp" placeholder="Registration" value="<?php echo $registration;?>" required>
+                            <input type="text" class="form-control has-validation" id="registration" name="registration" aria-describedby="reghelp" placeholder="Registration" value="" required>
                             <label id="registration" for="registration">Registration *</label>
                         </div>
 
