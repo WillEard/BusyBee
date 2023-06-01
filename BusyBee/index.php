@@ -6,7 +6,7 @@
 </head>
 <body class="bg-dark" style="scrollbar-width: none;">
 
-    <div class="container-fluid" style="background-color: #FF8B28;">
+    <div class="container-fluid bg-success" style="background-color: #FF8B28;">
         <div class="px-4 py-5 text-center shadow p-3 mb-5 rounded">
             <img class="d-block mx-auto mb-4" src="img/bee-svgrepo-com.svg" alt="" width="72" height="57">
             <?php 
