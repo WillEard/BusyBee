@@ -6,7 +6,7 @@
 </head>
 <body class="bg-dark" style="scrollbar-width: none;">
 
-    <div class="container-fluid bg-success" style="background-color: #FF8B28;">
+    <div class="container-fluid" style="background-color: #FF8B28;">
         <div class="px-4 py-5 text-center shadow p-3 mb-5 rounded">
             <img class="d-block mx-auto mb-4" src="img/bee-svgrepo-com.svg" alt="" width="72" height="57">
             <?php 
@@ -32,7 +32,7 @@
     </div>
 
     <div class="container-fluid" style="color: #FF8B28;">
-        <div class="container col-xxl-8 px-4 py-5">
+        <div class="container col-xxl-8 px-4 py-1">
             <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
                 <div class="col-10 col-sm-8 col-lg-6">
                     <img src="img/PoloDark.png" class="d-block mx-lg-auto img-fluid ms-4 " alt="Bootstrap Themes" width="800" height="600" loading="lazy">
@@ -40,7 +40,8 @@
                 <div class="col-lg-6">
                     <h1 class="display-5 fw-bold lh-1 mb-3">What are we about?</h1>
                     <hr/>
-                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi quaerat nobis commodi asperiores totam enim magnam saepe sapiente, quia eius, illo dolore recusandae dicta ipsa? Similique quae sequi in nobis.</p>
+                    <p class="lead">Buying? Selling? Use BusyBee to solve all your car trade problems. <br><br>
+                    We support all vehicle types, and finance quotes to make it as easy as possible.</p>
                     <div class="d-grid gap-2 d-md-flex justify-content-md-start">
                         
                     </div>
