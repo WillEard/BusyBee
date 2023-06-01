@@ -1,0 +1,13 @@
+* {
+    --form-background-color: #FF8B28 !important;
+    --page-background-color: #FBBF77 !important;
+}
+
+body {
+    background-color: var(--page-background-color);
+    
+}
+
+.formDiv {
+    background-color: var(--form-background-color);
+}
