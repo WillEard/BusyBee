@@ -29,6 +29,55 @@
         </div>
     </div>
 
+    <?php
+        // DECLARE variable and SET to 'registration' id tag from form
+        $Registration = $_POST["registration"];
+								            
+            // INITIALISE Curl
+            $curl = curl_init();
+            
+            // DECLARE Array
+            curl_setopt_array($curl, array(
+              // SET URL
+              CURLOPT_URL => "https://driver-vehicle-licensing.api.gov.uk/vehicle-enquiry/v1/vehicles",
+              // SET RETURN TO TRUE
+              CURLOPT_RETURNTRANSFER => true,
+              // IF Any specific encoding
+              CURLOPT_ENCODING => "",
+              // SET Maximum redirects before timeout
+              CURLOPT_MAXREDIRS => 10,
+              // SET TIMEOUT to 0
+              CURLOPT_TIMEOUT => 0,
+              CURLOPT_FOLLOWLOCATION => true,
+              // SET HTTP VERSION
+              CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+              // POST request for sending data
+              CURLOPT_CUSTOMREQUEST => "POST",
+              // PARAMETERS for posting data - registration entered
+              CURLOPT_POSTFIELDS =>"{\"registrationNumber\": \"$Registration\"}",
+              // USE API Key to access API - API KEY IS HIGHLY SENSITIVE DO NOT EXPOSE
+              CURLOPT_HTTPHEADER => array(
+                "x-api-key: ",
+                "Content-Type: application/json"
+              ),
+            ));
+
+            // EXECUTE above commands and store inside variable
+            $response = curl_exec($curl);
+            
+            // CLOSE the statement
+            curl_close($curl);	
+    
+        // GET Error code returned
+        $errorCode = (http_response_code());
+        // IF error code is 404 - Registration entered is invalid
+        if ($errorCode == 404)
+        {
+            // DISPLAY error
+            echo "<div class='col-md-3 mx-auto alert alert-danger' role='alert'>Error: Invalid Registration!</div>";
+        }
+    ?>
+
     <div id="" class="container">
         <div class="row">
             <div class="col-md-4">
