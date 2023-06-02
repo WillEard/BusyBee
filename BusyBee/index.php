@@ -26,9 +26,7 @@
                     <a href="Browse.php" type="button" class="btn btn-dark btn-lg px-4 gap-3">Get Started</a>
                 </div>
             </div>
-            
         </div>
-            
     </div>
 
     <div class="container-fluid" style="color: #FF8B28;">
