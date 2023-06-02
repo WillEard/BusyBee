@@ -144,9 +144,9 @@
                     {
                         echo '
                         
-                        <div class="container-fluid rounded pb-1 pt-1 mb-2 mx-auto shadow" style="background-color: #FF8B28;">
-                            <div class="row rounded mt-1 mb-1">
-                                <div class="col-md-6 text-center">
+                        <div id="hoverable" class="container-fluid rounded pb-1 pt-1 mb-2 mx-auto shadow hoverable">
+                            <div id="row" class="row rounded mt-1 mb-1">
+                                <div id="col1" class="col-md-6 text-center">
                                     <img src="img/car-hatchback-svgrepo-com.png" class="img-fluid w-100 rounded" alt="...">
                                     <hr/>
                                 ';

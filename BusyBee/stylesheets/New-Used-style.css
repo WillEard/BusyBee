@@ -1,3 +1,25 @@
 .deep-orange{
     background-color: #FF8B28 !important;
 }
+
+#hoverable {
+    background-color: #FF8B28 !important;
+    transition: 0.3s;
+
+}
+
+#hoverable:hover {
+    background-color: #212529 !important;
+    transition: 0.3s;
+    outline: 1px solid #FF8B28;
+}
+
+#col1 > a:hover {
+    background-color: #FF8B28 !important;
+}
+
+#hoverable:hover > #row > #col1 > a {
+    background-color: #FF8B28 !important;
+    transition: 0.3s;
+}
+
