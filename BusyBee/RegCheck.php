@@ -19,10 +19,10 @@
                     <form id="regForm" class="rounded" method="post" novalidate>
 
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control form-control-lg" id="registration" name="registration" aria-describedby="usernameHelp" placeholder="Username" required>
+                            <input type="text" class="form-control form-control-lg" id="registration" name="registration" aria-describedby="usernameHelp" placeholder="." required>
                             <label for="username">Registration</label>
                         </div>
-                        <button class="btn btn-success btn-lg" type="submit" name="submit" id="btnGetReg" value="submit" data-toggle="tooltip" data-placement="top" title="Reg" hidden>Get Vehicle Information</button>
+                        <button class="btn btn-success btn-lg" type="submit" name="submit" id="btnGetReg" value="submit" data-toggle="tooltip" data-placement="top" title="Reg" >Get Vehicle Information</button>
 
                     </form>
                 </div>
@@ -35,6 +35,11 @@
     <?php
         // DECLARE variable and SET to 'registration' id tag from form
         $Registration = $_POST["registration"];
+
+            if (empty($Registration))
+            {
+                Die();
+            }
 								            
             // INITIALISE Curl
             $curl = curl_init();
