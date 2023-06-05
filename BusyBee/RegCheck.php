@@ -16,7 +16,7 @@
                 
                 <p class="lead mb-4 mt-2">Enter a UK registration below to get live information.</p>
                 <div class="d-grid gap-2 d-flex justify-content-center">
-                    <form id="regForm" class="rounded" method="post" novalidate>
+                    <form id="regForm" class="rounded" action="" method="post" novalidate>
 
                         <div class="form-floating mb-3">
                             <input type="text" class="form-control form-control-lg" id="registration" name="registration" aria-describedby="usernameHelp" placeholder="." required>
@@ -29,8 +29,6 @@
             </div>
         </div>
     </div>
-
-    
 
     <?php
         // DECLARE variable and SET to 'registration' id tag from form
@@ -85,31 +83,31 @@
         if ($httpcode === 400)
         {
             // DISPLAY error
-            echo '<h3 class="text-light">Error: Bad Request</h3>';
+            echo '<h3 class="text-light text-center">Error: Bad Request</h3>';
         }
         // Forbidden
         if ($httpcode === 403)
         {
             // DISPLAY error
-            echo '<h3 class="text-light">Error: Forbidden : Access Denied</h3>';
+            echo '<h3 class="text-light text-center">Error: Forbidden : Access Denied</h3>';
         }
         // Too many requests
         if ($httpcode === 429)
         {
             // DISPLAY error
-            echo '<h3 class="text-light">Error: Too many requests, please wait.</h3>';
+            echo '<h3 class="text-light text-center">Error: Too many requests, please wait.</h3>';
         }
         // Bad Gatway
         if ($httpcode === 502)
         {
             // DISPLAY error
-            echo '<h3 class="text-light">Error: Bad Gateway</h3>';
+            echo '<h3 class="text-light text-center">Error: Bad Gateway</h3>';
         }
         // Gateway Timeout
         if ($httpcode === 504)
         {
             // DISPLAY error
-            echo '<h3 class="text-light">Error: Gateway Timeout</h3>';
+            echo '<h3 class="text-light text-center">Error: Gateway Timeout</h3>';
         }
 
         // Good
@@ -118,11 +116,6 @@
             // DISPLAY error
             echo '<h3 class="text-light text-center">Status: Success</h3>';
         }
-
-        
-
-
-        
 
         $string = $response;
 
@@ -134,7 +127,7 @@
         /*JSON ELEMENTS
             --registrationNumber,
             --taxStatus,
-            taxDueDate,
+            --taxDueDate,
             --motStatus,
             --make,
             --yearOfManufacture,
