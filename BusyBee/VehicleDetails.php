@@ -51,12 +51,14 @@
                 </div>
             </div>
         </div>
-        <div class="container">
+    </div>
+    <div class="container">
             <div class="row align-items-center my-3 flex">
                     <div class="col mx-auto d-flex ">
-                        <h2 class="fw-bold display-5 text-light me-2">Manufacturer</h2>
-                        <h2 class="fw-bold display-5 text-light me-2">Model</h2>
-                        <h2 class="fw-bold display-5 text-light me-2">Variant</h2>                        
+                        <h2 class="fw-bold display-5 text-light me-3">Manufacturer</h2>
+                        <h2 class="fw-bold display-5 text-light me-3">Model</h2>
+                        <h2 class="fw-bold display-5 text-light me-3">Variant</h2>    
+                        <h2 class="fw-bold display-5 text-light me-3">Price</h2>                                            
                     </div> 
                     
                 </div>
@@ -66,7 +68,7 @@
                     <table class="table text-light">
                         <thead>
                             <tr>
-                                <th scope="col"><h3 class="fw-bold">Summary</h3></th>
+                                <th scope="col"><h3 class="fw-bold display-6">Summary</h3></th>
                                 <th scope="col"></th>
                                 <th scope="col"></th>
                                 <th scope="col"></th>
@@ -109,14 +111,14 @@
                                 <th scope="row">Registration</th>
                                 <td>[Data]</td>
                             </tr>
-                            
-                            
                         </tbody>
                     </table>
+                    
+                    
                 </div>
+                <h3 class="display-6 text-light fw-bold mt-1">Additional Information</h3>
             </div>
         </div>
-        
 
 </body>
 </html>

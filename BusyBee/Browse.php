@@ -128,7 +128,7 @@
                     </select>
                     <button class="btn mt-1 fw-bold rounded" type="reset" style="background-color: #FF8B28;">Reset</button>
                     <button class="btn mt-1 fw-bold rounded btn-success" type="submit">Search</button>
-                    <a class="btn mt-3 fw-bold rounded" type="button" style="background-color: #FF8B28;">Check a Reg</a>
+                    <a href="RegCheck.php" class="btn mt-3 fw-bold rounded" type="button" style="background-color: #FF8B28;">Check a Reg</a>
                 </div>
             </div>
             
@@ -142,6 +142,8 @@
                     
                     for ($x = 0; $x < $count; $x++) 
                     {
+                        $vehicleData = $browseData->FetchInfo();
+
                         echo '
                         
                         <div id="hoverable" class="container-fluid rounded pb-1 pt-1 mb-2 mx-auto shadow hoverable">
@@ -150,36 +152,29 @@
                                     <img src="img/car-hatchback-svgrepo-com.png" class="img-fluid w-100 rounded" alt="...">
                                     <hr/>
                                 ';
-                                        $vehicleID = $browseData->FetchUID();
-                                echo '<a href="#" id="$vehicleID[$x]["VehicleID"]" class="btn mt-3 fw-bold rounded bg-dark text-light d-block" type="button" >View More</a>
+                                echo '<a href="#" id="$vehicleData[$x]["VehicleID"]" class="btn mt-3 fw-bold rounded bg-dark text-light d-block" type="button" >View More</a>
                                 </div>
                                 <div class="col-md-3 p-3 ps-2">
                                     <h4 class="mt-0 fw-bold"> ';  
-                                        $manuf = $browseData->FetchManufacturer(); 
-                                        echo $manuf[$x]["Manufacturer"];
+                                        echo $vehicleData[$x]["Manufacturer"];
                                     echo '</h4>';
                                     
                                     echo '<h5 class="fw-bold">'; 
-                                        $model = $browseData->FetchModel(); 
-                                        echo $model[$x]["Model"];
+                                        echo $vehicleData[$x]["Model"];
                                     echo '<span> | </span>'; 
-                                       $var = $browseData->FetchVariant(); 
-                                       echo $var[$x]["Variant"]; 
+                                       echo $vehicleData[$x]["Variant"]; 
                                     echo '</5>';
 
                                     echo '<h5 class="fw-bold">';
-                                        $year = $browseData->FetchAge(); 
-                                        echo 'Year: '.$year[$x]["Age"];
+                                        echo 'Year: '.$vehicleData[$x]["Age"];
                                     echo'</h5>';
 
                                     echo '<h5 class="fw-bold">';
-                                        $miles = $browseData->FetchMileage(); 
-                                        echo 'Mileage: '.$miles[$x]["Mileage"];
+                                        echo 'Mileage: '.$vehicleData[$x]["Mileage"];
                                     echo'</h5>';
 
                                     echo '<h5 class="fw-bold">';
-                                        $fuel = $browseData->FetchFuel(); 
-                                        echo 'Fuel: '.$fuel[$x]["FuelType"];
+                                        echo 'Fuel: '.$vehicleData[$x]["FuelType"];
                                     echo'</h5>';
                                 
                                 echo'
@@ -187,28 +182,23 @@
                                 <div class="col-md-3 p-3 ps-2"> ';
 
                                     echo '<h4 class="mt-0 fw-bold">';  
-                                        $price = $browseData->FetchPrice();
-                                        echo '£'.$price[$x]["Price"];
+                                        echo '£'.$vehicleData[$x]["Price"];
                                     echo '</h4>';
                                         
                                     echo '<h5 class="fw-bold">';
-                                        $cat = $browseData->FetchCategory();
-                                        echo 'Category: '.$cat[$x]["Category"];
+                                        echo 'Category: '.$vehicleData[$x]["Category"];
                                     echo '</h5>';
 
                                     echo '<h5 class="fw-bold">';
-                                        $colour = $browseData->FetchColour(); 
-                                        echo 'Colour: '.$colour[$x]["Colour"];
+                                        echo 'Colour: '.$vehicleData[$x]["Colour"];
                                     echo'</h5>';
 
                                     echo '<h5 class="fw-bold">';
-                                        $gear = $browseData->FetchGearbox(); 
-                                        echo 'Gearbox: '.$gear[$x]["Gearbox"];
+                                        echo 'Gearbox: '.$vehicleData[$x]["Gearbox"];
                                     echo'</h5>';
 
                                     echo '<h5 class="fw-bold">';
-                                        $engine = $browseData->FetchGearbox(); 
-                                        echo 'Engine: '.$engine[$x]["EngineSize"];
+                                        echo 'Engine: '.$vehicleData[$x]["EngineSize"];
                                     echo'</h5>';
 
                                 echo'
