@@ -17,8 +17,8 @@ $(document).ready(function()
             confirmpass: {
                 required: true,
                 minlength: 12,
-                maxlength: 128,
-                equalTo: "#pass"
+                maxlength: 128
+                //equalTo: "#pass"
             },
             email: {
                 required: true,
@@ -38,8 +38,8 @@ $(document).ready(function()
             confirmpass: {
                 required: "Confirm password is required",
                 minlength: "Minimum length of 12 characters",
-                maxlength: "Maximum of 128 characters",
-                equalTo: "Passwords must match"
+                maxlength: "Maximum of 128 characters"
+                //equalTo: "Passwords must match"
             },
             email: {
                 required: "Email is required",
@@ -50,11 +50,11 @@ $(document).ready(function()
 
     $("#submitbutton").click(function()
     {
-        /*
+        
         $.post("includes/login-inc.php",function(data)
         {
             alert(data);
         });
-        */
+        
     });
 });
