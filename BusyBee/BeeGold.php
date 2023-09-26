@@ -21,7 +21,7 @@
                     <h4 class="my-0 fw-normal">Standard</h4>
                 </div>
                 <div class="card-body">
-                    <h1 class="card-title pricing-card-title">£0<small class="text-dark fw-light">/mo</small></h1>
+                    <h1 class="card-title pricing-card-title">Free<small class="text-dark fw-light"></small></h1>
                     <ul class="list-unstyled mt-3 mb-4">
                         <li>Standard Helpline</li>
                         <li>Unlimited Sales</li>
@@ -36,7 +36,7 @@
                         <h4 class="my-0 fw-normal">Bee-Gold</h4>
                     </div>
                     <div class="card-body">
-                        <h1 class="card-title pricing-card-title">£9.99<small class="text-dark fw-light">/mo</small></h1>
+                        <h1 class="card-title pricing-card-title">£9.99<small class="text-dark fw-light"></small></h1>
                         <ul class="list-unstyled mt-3 mb-4">
                             <li>Priority Listing</li>
                             <li>Fraud Prevention</li>

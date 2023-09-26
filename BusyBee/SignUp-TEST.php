@@ -7,7 +7,7 @@
 
         <title>Document</title>
     </head>
-    <body style="background-color: #212529;">
+    <body style="background-color: #FF8B28;">
         <div class="container mt-3" id="container">
             <div class="form-container sign-up-container">
                 <form action="#">
