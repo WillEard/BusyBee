@@ -22,7 +22,7 @@
     </div>
     
 <section class="h-100 gradient-custom-2">
-  <div class="container-fluid py-5 h-100">
+  <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col col-lg-9 col-xl-7">
         <div class="card">
@@ -39,7 +39,7 @@
             <div class="ms-3" style="margin-top: 130px;">
               <h5>
                 <?php
-                    $profileInfo->FetchTitle($_SESSION["userid"]);
+                    echo $profileInfo->FetchTitle($_SESSION["userid"]);
                     echo '<br>';
                 ?>
               </h5>
