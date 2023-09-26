@@ -41,7 +41,13 @@
                             <li>Priority Listing</li>
                             <li>Fraud Prevention</li>
                         </ul>
-                        <button type="button" class="w-100 btn btn-lg btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Get started</button>
+                        <button onclick="Payment()" type="button" class="w-100 btn btn-lg btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Get started</button>
+
+                        <script>
+                            function Payment() {
+                                window.location.href='BeeGold-Payment.php';
+                            }
+                        </script>
                     </div>
                 </div>
             </div>
@@ -114,11 +120,15 @@
                         if(isset($_SESSION["userid"]))
                         {
                         echo '<p class="fw-bold">You already have Bee-Gold!</p>';
+
+
+                        exit();
                         }
                         else
                         {
                         echo '<p class="fw-bold">Please login to subscribe!</p>';
                         }
+                        
                     ?>
                         
                     </div>

@@ -20,60 +20,93 @@
             </div>  
         </div>
     </div>
-
-    <div class="container text-light mt-5">
-        <div class="row">
-            <div class="col-md-6 mx-auto">
-                <div class="container pt-3 pb-3 rounded-top" style="background-color: #FF8B28;">
-                    <img class="img rounded" src="https://placehold.co/200" alt="">
-                    <br>
-                        <a href="profilesettings.php" type="button" class="btn btn-sm btn-light mt-1">PROFILE SETTINGS</a>
-                        <h4 class="pt-2 fw-bold">
-                            <?php
-                                $profileInfo->FetchTitle($_SESSION["userid"]);
-                                echo '<br>';
-                            ?>
-                            </h4>
-                            <h4>Bee-Gold Status: <span class="text-success">Active</span>/<span class="text-danger">Inactive</span></h4> <hr>
-                            <h5>
-                            <?php
-                                $profileInfo->FetchText($_SESSION["userid"]);
-                            ?>
-                        </h4>                    
-                </div>
-
-                <div class="container pb-1 pt-1 rounded-bottom mb-3" style="background-color: #FF8B28;">
-                    <h5 class="fw-bold"><strong>ABOUT</strong></h5>
-                    <h6 class="lead"><em>
-                        <?php
-                            $profileInfo->FetchAbout($_SESSION["userid"]);
-                        ?>
-                        <hr/>
-                    </em></h6>
-                    <h5 class="fw-bold">FOLLOWERS</h5><h6>0</h6>
-                    <h5 class="fw-bold">FOLLOWING</h5><h6>0</h6>
-                    <h5 class="fw-bold">RATING</h5>
+    
+<section class="h-100 gradient-custom-2">
+  <div class="container-fluid py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col col-lg-9 col-xl-7">
+        <div class="card">
+          <div class="rounded-top text-white d-flex flex-row" style="background-color: #FF8B28; height:200px;">
+            <div class="ms-4 mt-5 d-flex flex-column" style="width: 150px;">
+              <img src="https://placehold.co/200"
+                alt="Generic placeholder image" class="img-fluid img-thumbnail mt-4 mb-2"
+                style="width: 150px; z-index: 1">
+              <a href="profilesettings.php" type="button" class="btn btn-dark" data-mdb-ripple-color="dark"
+                style="z-index: 1;">
+                Edit profile
+            </a>
+            </div>
+            <div class="ms-3" style="margin-top: 130px;">
+              <h5>
+                <?php
+                    $profileInfo->FetchTitle($_SESSION["userid"]);
+                    echo '<br>';
+                ?>
+              </h5>
+              <p>[LOCATION]</p>
+            </div>
+          </div>
+          
+          <div class="p-4 text-black" style="background-color: #f8f9fa;">
+            <div class="d-flex justify-content-end text-center py-1">
+              <div>
+                <p class="mb-1 h5">XX</p>
+                <p class="small text-muted mb-0">Sales</p>
+              </div>
+              <div class="px-3">
+                <p class="mb-1 h5">XX</p>
+                <p class="small text-muted mb-0">Followers</p>
+              </div>
+              <div>
+                <p class="mb-1 h5">XX</p>
+                <p class="small text-muted mb-0">Following</p>
+              </div>
+            </div>
+            <div class="d-flex justify-content-start text-center py-1">
+                <div>
+                    <p class="mb-1 h5">Bee-Gold Member:<span class="text-success">Yes</span></p>
+                    <p class="mb-1 h5">Rating: </span>
                     <span class="fa fa-star checked"></span>
                     <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star"></span>
-                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star "></span>
+                    <span class="fa fa-star "></span>
+                    <span class="fa fa-star"></span></p>
                 </div>
             </div>
-            <div class="col-md-5 mx-auto">
-                <div class="container-fluid rounded-top pb-1 pt-1" style="background-color: #FF8B28;">
-                    <h5 class="text-center">Your Items For Sale</h5>
-                </div><br>
+          </div>
+          
+          <div class="card-body p-4 text-black">
+            <div class="mb-3">
+              <p class="lead fw-bold mb-1">About</p>
+              <div class="p-4" style="background-color: #f8f9fa;">
+                <p class="font-italic mb-1">
+                    <?php $profileInfo->FetchText($_SESSION["userid"]); ?>
+                </p>
+              </div>
+            </div>
+            <div class="mb-5">
+              <p class="lead fw-bold mb-1">Bio</p>
+              <div class="p-4" style="background-color: #f8f9fa;">
+                <p class="font-italic mb-1">
+                    <?php $profileInfo->FetchAbout($_SESSION["userid"]); ?>
+                </p>
+              </div>
+            </div>
 
-                <div class="container-fluid rounded pb-1 pt-1 border border-danger">
-                    <div class="row g-0 position-relative rounded mt-1">
-                        <div class="col p-4 ps-md-0 text-center">
-                            <h5 class="mt-0">You currently have no listings.</p>
+            <div class="d-flex justify-content-between align-items-center mb-4">
+              <p class="lead fw-bold mb-0">For Sale</p>
+            </div>
+            <div class="row g-2">
+                <!-- 0 LISTINGS
+                    <div class="container-fluid rounded pb-1 pt-1 border border-danger">
+                        <div class="row g-0 position-relative rounded mt-1">
+                            <div class="col p-4 ps-md-0 text-center">
+                                <h5 class="my-0">You currently have no listings.</p>
+                            </div>
                         </div>
-                    </div>
-                </div> 
+                    </div> 
+                -->
 
-                <!-- LISTING 1 
                 <div class="container-fluid rounded pb-1 pt-1" style="background-color: #FF8B28;">
                     <div class="row g-0 position-relative rounded mt-1">
                         <div class="col-md-6 mb-md-0 p-md-2">
@@ -85,12 +118,13 @@
                         </div>
                     </div>
                 </div>   
-                -->
-                 
-                
+
             </div>
         </div>
+      </div>
     </div>
+  </div>
+</section>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
